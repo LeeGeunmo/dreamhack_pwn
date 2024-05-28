@@ -1,0 +1,10 @@
+a.asm 파일을 nasm -f elf64 a.asm
+
+objdump -d a.o
+
+objcopy --dump-section .text=a.bin a.o   로 a.bin 생성
+
+xxd a.bin
+
+cat a.bin | nc ip <port>
+
